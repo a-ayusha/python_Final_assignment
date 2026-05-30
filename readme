@@ -1,0 +1,182 @@
+# Sales / Business Management System
+
+## Project Overview
+
+This is a **Business Management System** built using **Python, SQLite, and Streamlit**.
+The application helps manage products, customers, and sales in a simple and interactive way.
+
+---
+
+## Features
+
+### 1. Product Management
+
+* Add new products
+* View all products
+* Update product details
+* Delete products
+  **Fields:** ID, Name, Category, Price, Stock
+
+---
+
+### 2. 👤 Customer Management
+
+* Add new customers
+* View all customers
+* Update customer details
+* Delete customers
+  **Fields:** ID, Name, Phone, Email, Address
+
+---
+
+### 3. 🧾 Sales Management
+
+* Record a sale
+* Select product and customer
+* Enter quantity
+* Auto-calculate total amount
+* Automatically update stock
+* View complete sales history
+
+---
+
+### 4. 📊 Dashboard
+
+* Total sales amount
+* Total number of products
+* Total number of customers
+
+---
+
+### 5. 🧾 PDF Bill Generation
+
+* Generate downloadable PDF bill for each sale
+* Includes:
+
+  * Sale ID
+  * Product Name
+  * Customer Name
+  * Quantity
+  * Total Amount
+  * Date
+
+---
+
+## 🛠️ Technologies Used
+
+* **Python**
+* **SQLite (Database)**
+* **Streamlit (User Interface)**
+* **Pandas (Data Handling)**
+* **ReportLab (PDF Generation)**
+
+---
+
+## 🗄️ Database Structure
+
+### Table: `products`
+
+| Column   | Type                  |
+| -------- | --------------------- |
+| id       | INTEGER (Primary Key) |
+| name     | TEXT                  |
+| category | TEXT                  |
+| price    | REAL                  |
+| stock    | INTEGER               |
+
+---
+
+### Table: `customers`
+
+| Column  | Type                  |
+| ------- | --------------------- |
+| id      | INTEGER (Primary Key) |
+| name    | TEXT                  |
+| phone   | TEXT                  |
+| email   | TEXT                  |
+| address | TEXT                  |
+
+---
+
+### Table: `sales`
+
+| Column      | Type                  |
+| ----------- | --------------------- |
+| id          | INTEGER (Primary Key) |
+| product_id  | INTEGER               |
+| customer_id | INTEGER               |
+| quantity    | INTEGER               |
+| total       | REAL                  |
+| date        | TEXT                  |
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone <your-repo-link>
+cd project-folder
+```
+
+### 2. Install Required Libraries
+
+```bash
+pip install streamlit pandas reportlab
+```
+
+### 3. Run the Application
+
+```bash
+streamlit run app.py
+```
+
+---
+
+## 📂 Project Structure
+
+```
+project-folder/
+│
+├── app.py          # Main Streamlit application
+├── business.db     # SQLite database (auto-created)
+├── README.md       # Project documentation
+```
+
+---
+
+## ✅ Validations Implemented
+
+* Email format validation
+* Phone number validation
+* Price format validation
+* Stock value validation
+
+---
+
+## 🎯 Learning Outcomes
+
+* CRUD operations using SQLite
+* Building UI using Streamlit
+* Database integration with Python
+* Handling real-world business logic
+* Generating PDF reports
+
+---
+
+## 📌 Conclusion
+
+This project demonstrates how to build a **complete business management system** using Python. It combines database operations, user interface design, and real-world application features in a single project.
+
+---
+
+## 🙌 Author
+
+**Your Name Here**
+
+---
+
+## 📎 Note
+
+This project is created as part of a Python assignment for learning purposes.
