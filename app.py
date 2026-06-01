@@ -10,7 +10,7 @@ from reportlab.pdfgen import canvas
 conn = sqlite3.connect("business.db", check_same_thread=False)
 cursor = conn.cursor()
 
-# Create tables
+# CREATE TABLE
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS products (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS sales (
 
 conn.commit()
 
-#---------helping function for regex---------
+#---------HELPING FUNCTIONM FOR REGEX---------
 def is_valid_email(email):
     pattern = r"^[\w\.-]+@[\w\.-]+\.\w+$"
     return re.match(pattern, email)
